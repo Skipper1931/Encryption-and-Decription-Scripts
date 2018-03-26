@@ -119,4 +119,5 @@ def quitConfirm(q):
         word = word + 1
         lastword = 'itquay'
         translate()
+        
 tutConf()
