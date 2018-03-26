@@ -1,4 +1,4 @@
-# Aaron Perrotta's Pyg Latin Translator
+# Skipper1931's Pyg Latin Translator
 # Run on CodeSkulpter.org for best effect!
 # Have fun! :D
 
