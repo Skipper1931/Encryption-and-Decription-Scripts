@@ -6,15 +6,15 @@
 def thank():
     
     # Get's user input
-    name = input("What is you name")
-    event = input("What type of event did you host? (e.g. Bar Mitzvah, Birthday Party, Wedding, etc.")
-    first = input("What is the recipiant of this letter's first name? (e.g. John)") 
-    last = input("What is the recipiant of this letter's last name? (e.g. Smith")
-    friend = input("Are you friends with this person? (y or n)")
+    name = raw_input("What is your name?")
+    event = raw_input("What type of event did you host? (e.g. Bar Mitzvah, Birthday Party, Wedding, etc.")
+    first = raw_input("What is the recipiant of this letter's first name? (e.g. John)") 
+    last = raw_input("What is the recipiant of this letter's last name? (e.g. Smith")
+    friend = raw_input("Are you friends with this person? (y or n)")
     friend = friend.lower() 
-    gender = input("What is the recipiant's gender? (f or m)") 
+    gender = raw_input("What is the recipiant's gender? (f or m)") 
     gender = gender.lower()
-    married = input("Is the recipiant married? (y or n)")
+    married = raw_input("Is the recipiant married? (y or n)")
     married = married.lower()           
    
     # Figures out int
