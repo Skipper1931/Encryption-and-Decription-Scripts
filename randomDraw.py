@@ -5,8 +5,6 @@
 from random import *
 from turtle import *
 
-
-
 # gets user input
 randMin = input("Enter the minimum integer for the random number generator ")
 randMax = input("Enter the maximum integer for the random number generator ")
@@ -32,18 +30,10 @@ step = 1
 stps = str(steps)
 print("There will be " + stps + " steps.")
 
-# loop function thing because im too lazy to just use a loop (I like functions :P)
-def loop():
 
-    # global variables because i always somehow endup using these dang things (I like 'em tho)
-    global steps
-    global step
-    global randMin
-    global randMax
-    global stps
-    global xbound
-    global ybound
-
+# loop
+while step != steps + 1:
+    
     # prevents turtle from moving off screen
     x = xcor()
     y = ycor()
@@ -67,14 +57,14 @@ def loop():
         # RNG
         operation = randint(1,2)
         opNum = randint(randMin,randMax)
-        stp = str(step)
+ 
 
         # sets up screen
         screensize(2000,1500)
         
         # writes turtle to screen
         if operation == 1:
-            print("Step " + stp + "/" + stps + ": Left")
+            print("Step " + str(step) + "/" + stps + ": Left")
             if opNum > 360:
                 left(randint(randMin,359))
             else:
@@ -83,9 +73,8 @@ def loop():
             step = step + 1
             operation = 0
             opNum = 0
-            loop()
         elif operation == 2:
-            print("Step " + stp + "/" + stps + ": Right")
+            print("Step " + str(step) + "/" + stps + ": Right")
             if opNum > 360:
                 right(randint(randMin,359))
             else:
@@ -94,8 +83,5 @@ def loop():
             step = step + 1
             operation = 0
             opNum = 0
-            loop()
-    else:
-        import thank
 
-loop()
+import thank
