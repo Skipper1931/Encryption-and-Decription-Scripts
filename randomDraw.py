@@ -1,13 +1,13 @@
 # Random line drawer
 # By Skipper1931
 
-# imports libs.
+# imports libs
 from random import *
 from turtle import *
 
 # gets user input
 randMin = input("Enter the minimum integer for the random number generator ")
-randMax = input("Enter the minimum integer for the random number generator ")
+randMax = input("Enter the maximum integer for the random number generator ")
 randMin = int(randMin)
 randMax = int(randMax)
 
@@ -25,7 +25,6 @@ def loop():
     global step
     global randMin
     global randMax
-    print("gottoloop")
 
     # meat
     if step != steps + 1:
