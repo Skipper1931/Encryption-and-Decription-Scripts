@@ -14,8 +14,8 @@ randMax = int(randMax)
 # staring vars
 steps = randint(randMin,randMax)
 step = 1
-stepPrint = str(steps)
-print("There will be " + stepPrint + " steps.")
+stps = str(steps)
+print("There will be " + stps + " steps.")
 
 # while loop function because im too lazy to just use a loop (I like functions :P)
 def loop():
@@ -25,13 +25,13 @@ def loop():
     global step
     global randMin
     global randMax
+    global stps
 
     # meat
     if step != steps + 1:
     	operation = randint(1,2)
     	opNum = randint(randMin,randMax)
     	stp = str(step)
-        stps = str(steps)
     	if operation == 1:
     	    print("Step " + stp + "/" + stps + ": Left")
     	    if opNum > 360:
@@ -54,5 +54,7 @@ def loop():
     	    operation = 0
             opNum = 0
     	    loop()
+    else:
+        import thank
 
 loop()

@@ -110,7 +110,7 @@ def quitConfirm(q):
     global word
     global lastword
     if q == "y":
-        quit
+        import thank
     else:
         word = str(word)
         print(word + ". original: quit")
