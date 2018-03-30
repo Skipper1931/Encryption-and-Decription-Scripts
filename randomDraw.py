@@ -28,23 +28,31 @@ def loop():
 
     # meat
     if step != steps + 1:
-	    operation = randint(1,2)
-	    opNum = randint(randMin,randMax)
-	    opNum = int(opNum)
-	    stp = str(step)
-	    if operation == 1:
-		    print("Step " + stp + ": Left")
-		    left(opNum)
-		    forward(80)
-		    step = step + 1
-		    operation = 0
-		    loop()
-	    elif operation == 2:
-		    print("Step " + stp + ": Right")
-		    right(opNum)
-		    forward(80)
-		    step = step + 1
-		    operation = 0
-		    loop()
+    	operation = randint(1,2)
+    	opNum = randint(randMin,randMax)
+    	stp = str(step)
+        stps = str(steps)
+    	if operation == 1:
+    	    print("Step " + stp + "/" + stps + ": Left")
+    	    if opNum > 360:
+    	        left(randint(0,359))
+    	    else:
+    	        left(opNum)
+    	    forward(80)
+    	    step = step + 1
+    	    operation = 0
+            opNum = 0
+    	    loop()
+    	elif operation == 2:
+            print("Step " + stp + "/" + stps + ": Right")
+            if opNum > 360:
+    	        right(randint(0,359))
+    	    else:
+    	        right(opNum)
+    	    forward(80)
+    	    step = step + 1
+    	    operation = 0
+            opNum = 0
+    	    loop()
 
 loop()
