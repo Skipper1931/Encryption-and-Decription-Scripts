@@ -35,14 +35,14 @@ def loop():
 	    if operation == 1:
 		    print("Step " + stp + ": Left")
 		    left(opNum)
-		    forward(opNum)
+		    forward(80)
 		    step = step + 1
 		    operation = 0
 		    loop()
 	    elif operation == 2:
 		    print("Step " + stp + ": Right")
 		    right(opNum)
-		    forward(opNum)
+		    forward(80)
 		    step = step + 1
 		    operation = 0
 		    loop()
