@@ -5,6 +5,7 @@
 from random import *
 from turtle import *
 from datetime import *
+from tkinter import *
 
 # gets user input
 randMin = input("Enter the minimum integer for the random number generator ")
@@ -91,6 +92,7 @@ while step != steps + 1:
             opNum = 0
         detailLog = "{}\n{}".format(detailLog,detailPre)
 # Logs Stuff
+output = getscreen()
 user = input("Would you like to save a more detailed log? (y or n)")
 user = user.lower()
 
@@ -99,6 +101,7 @@ if step == steps + 1 and user != "y":
     log = open("bounces.log","a+")
     log.write("\n[{}] Bounces: {} Steps: {}".format(date.strftime("%Y-%m-%d %H:%M:%S"),bounces,steps))
     log.close()
+    output.getcanvas().postscript(file="randomDrawOutput.eps")
     import thank
 elif step == steps + 1 and user == "y":
     date = datetime.now()
@@ -108,4 +111,5 @@ elif step == steps + 1 and user == "y":
     log = open("bounces.log","a+")
     log.write("\n[{}] Bounces: {} Steps: {}".format(date.strftime("%Y-%m-%d %H:%M:%S"),bounces,steps))
     log.close()
+    output.getcanvas().postscript(file="randomDrawOutput.eps")
     import thank
