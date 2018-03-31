@@ -1,10 +1,8 @@
 
 Python Launcher
 
-bounces.log
-
 *.pyc
 
 *.eps
 
-2018-03-31 10:09:52.log
+*.log
